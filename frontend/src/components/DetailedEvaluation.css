@@ -1,0 +1,109 @@
+.question-eval.pending {
+  background: #fff9e6;
+  border-left: 4px solid #ffc107;
+}
+
+.pending-btn {
+  background: #fff3cd;
+  border: 1px solid #ffc107;
+  color: #664d03;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.pending-btn.active {
+  box-shadow: 0 0 0 2px rgba(255,193,7,0.4);
+}
+
+.topic-pending {
+  background: #fff9e6;
+  border-left: 5px solid #ffc107;
+}
+
+.topic-pending h4 {
+  color: #664d03;
+}
+
+/* ===============================
+   MOBILE RESPONSIVE FIX
+   (Desktop untouched)
+================================ */
+@media (max-width: 768px) {
+
+  .evaluation-container {
+    padding: 10px;
+  }
+
+  /* Topic card */
+  .topic-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  /* Section header */
+  .topic-card > div:first-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .topic-card h4 {
+    font-size: 15px;
+  }
+
+  /* Mark Topic Pending button */
+  .topic-card .pending-btn {
+    align-self: flex-start;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  /* Question card */
+  .question-eval {
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 10px;
+  }
+
+  .question-eval b {
+    font-size: 13px;
+    line-height: 1.4;
+    display: block;
+  }
+
+  .question-eval p {
+    font-size: 12px;
+    margin-top: 6px;
+    word-break: break-word;
+  }
+
+  /* YES / NO / PENDING buttons */
+  .yn-bottom-right {
+    position: static;
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .yn-bottom-right button {
+    flex: 1;
+    min-width: 90px;
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  /* Overall feedback */
+  textarea {
+    font-size: 13px;
+  }
+
+  /* Submit button */
+  .submit-eval {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+}

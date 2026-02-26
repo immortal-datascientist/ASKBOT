@@ -1,0 +1,562 @@
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.evaluation-container {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  margin: auto;
+  color: #000;
+  overflow: visible !important;
+}
+
+.evaluation-container {
+  padding: 24px;
+  background: #f7f9fb;
+  min-height: 100vh;
+}
+
+.evaluation-container h3 {
+  font-weight: 700;
+  color: #04352d;
+  margin-bottom: 20px;
+}
+
+
+/* Optional: smooth visual */
+.report-card {
+  transition: all 0.25s ease;
+}
+
+
+/* GRID */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
+.report-card {
+  position: relative;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 18px 22px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  border: 2px solid transparent;
+}
+
+.report-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.report-card.active {
+   box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.08);
+}
+
+/* ⚪ Not started */
+.report-card.status-not-started {
+  border: 2px solid #dcdcdc;
+  background-color: #f9f9f9;
+}
+
+/* 🟡 In progress / re-evaluation */
+.report-card.status-pending {
+  border: 2px solid #fbc02d;
+  background-color: #fff8e1;
+}
+
+/* 🟢 Completed */
+.report-card.status-completed {
+  border: 2px solid #43a047;
+  background-color: #e8f5e9;
+}
+
+
+/* Keep status color even when active */
+.report-card.status-pending.active {
+  border-color: #fbc02d;
+  background-color: #fff8e1;
+}
+
+.report-card.status-completed.active {
+  border-color: #43a047;
+  background-color: #e8f5e9;
+}
+
+/* FILE ICON */
+.file-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.test-name {
+  font-weight: 600;
+  font-size: 15px;
+  color: #1f2937;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.user-name {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.user-name span {
+  font-weight: 600;
+  color: #374151;
+}
+
+/* BUTTON */
+.report-btn {
+  width: 100%;
+  background: #00a693;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 0;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.report-btn:hover {
+  background: #028f7d;
+}
+
+/* DELETE ICON */
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffe4e6;
+  border: none;
+  color: #dc2626;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 14px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+
+.report-card:hover .delete-icon {
+  opacity: 1;
+}
+
+.delete-icon:hover {
+  background: #dc2626;
+  color: #ffffff;
+}
+.reeval-btn {
+  background: #fd8802;
+  color: #f8f8f7;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reeval-btn:hover {
+  background: #e48314;
+}
+
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.evaluation-container h3 {
+  font-weight: 700;
+  color: #0f5132;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   SELECTORS
+================================ */
+.selectors {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 9999;
+}
+
+.selectors select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  min-width: 200px;
+}
+
+.selectors button {
+  background: #198754;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.selectors button:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
+}
+
+/* ===============================
+   BODY
+================================ */
+.evaluation-body {
+  margin-top: 20px;
+}
+
+/* ===============================
+   TOPIC CARD
+================================ */
+.topic-card {
+  background: #f8f9fa;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  border-left: 6px solid #198754;
+}
+
+.topic-card h4 {
+  font-weight: 700;
+  color: #14532d;
+  margin-bottom: 15px;
+}
+
+/* ===============================
+   QUESTION CARD
+================================ */
+.question-eval {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 16px 16px 48px 16px; /* extra bottom space for buttons */
+  margin-bottom: 14px;
+  border: 2px solid transparent;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Question & Answer text (same style) */
+.qa-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* ===============================
+   YES / NO BUTTONS (BOTTOM RIGHT)
+================================ */
+.yn-bottom-right {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+/* YES button */
+.yes-btn {
+  background: #e9f7ef;
+  color: #198754;
+  border: 2px solid #198754;
+  padding: 4px 16px;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* NO button */
+.no-btn {
+  background: #fdecea;
+  color: #dc3545;
+  border: 2px solid #dc3545;
+  padding: 4px 16px;
+  border-radius: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Active states */
+.yes-btn.active {
+  background: #198754;
+  color: #ffffff;
+}
+
+.no-btn.active {
+  background: #dc3545;
+  color: #ffffff;
+}
+
+/* ===============================
+   QUESTION COLOR STATES
+================================ */
+.question-eval.correct {
+  border-color: #198754;
+  background: #f0fdf4;
+}
+
+.question-eval.incorrect {
+  border-color: #dc3545;
+  background: #fff5f5;
+}
+
+/* ===============================
+   FEEDBACK TEXTAREA
+================================ */
+.topic-card textarea {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 8px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  resize: vertical;
+}
+
+/* ===============================
+   FOOTER / SUBMIT BUTTON
+================================ */
+.evaluation-footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.submit-eval {
+  background: #0d6efd;
+  color: #ffffff;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.submit-eval:hover {
+  background: #0b5ed7;
+}
+
+
+/* ===============================
+   MAIN CONTAINER
+================================ */
+.evaluation-container {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1200px;
+  margin: auto;
+  color: #000;
+}
+
+.evaluation-container h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0f5132;
+  margin-bottom: 30px;
+}
+
+/* ===============================
+   REPORT GRID (FILES)
+================================ */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+/* ===============================
+   FILE CARD
+================================ */
+.report-card {
+  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+
+/* ❌ DELETE ICON */
+.delete-icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #f1f1f1;
+  color: #dc3545;
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+.delete-icon:hover {
+  background: #dc3545;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+
+/* ===============================
+   FILE ICON
+================================ */
+.file-icon {
+  font-size: 50px;
+  margin-bottom: 14px;
+}
+
+/* ===============================
+   TEST NAME
+================================ */
+.report-card h5 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+/* ===============================
+   USER NAME
+================================ */
+.report-card p {
+  font-size: 22px;        /* 🔥 increased font size */
+  font-weight: 600;      /* 🔥 clearer */
+  color: #0a5a5a;        /* darker text */
+  margin-bottom: 16px;
+}
+
+
+/* ===============================
+   REPORT BUTTON
+================================ */
+.report-btn {
+  background: #dc3545;
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.report-btn:hover {
+  background: #bb2d3b;
+}
+
+/* ===============================
+   EMPTY STATE
+================================ */
+.no-reports {
+  text-align: center;
+  font-size: 16px;
+  color: #6b7280;
+  margin-top: 40px;
+}
+.report-card {
+  cursor: pointer;
+}
+
+/* =========================
+   REPORT GRID
+========================= */
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 50px; /* 🔥 SPACE BELOW FILE CARDS */
+}
+
+/* =========================
+   REPORT DETAILS SECTION
+========================= */
+.report-details {
+  margin-top: 40px; /* 🔥 PUSH CHART / EVALUATION DOWN */
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* =========================
+   DONUT CONTAINER
+========================= */
+.donut-container {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  margin-top: 20px;   /* 🔥 EXTRA TOP SPACE */
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* =========================
+   DONUT STATS
+========================= */
+.donut-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 15px;
+}
+
+/* =========================
+   RESPONSIVE FIX
+========================= */
+@media (max-width: 768px) {
+  .donut-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ===============================
+   RESPONSIVE
+================================ */
+@media (max-width: 600px) {
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}

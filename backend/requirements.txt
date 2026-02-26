@@ -1,0 +1,43 @@
+# backend/requirements.txt
+
+# =============================
+# Core Web & API Frameworks
+# =============================
+fastapi
+uvicorn[standard]
+pydantic
+
+# =============================
+# LLM, RAG, and Embedding Models
+# =============================
+langchain-groq
+langchain-core
+sentence-transformers
+chromadb
+
+# =============================
+# PDF & Document Processing
+# =============================
+pypdf
+pdfplumber
+PyMuPDF
+Pillow
+
+# =============================
+# OCR & Image Processing
+# =============================
+paddleocr
+opencv-python-headless
+numpy
+torch --index-url https://download.pytorch.org/whl/cpu
+transformers
+
+# =============================
+# NLP & Text Processing
+# =============================
+nltk
+
+# =============================
+# Utilities & Environment
+# =============================
+python-dotenv

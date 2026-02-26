@@ -1,0 +1,51 @@
+/* ===== Animation: Fade + Zoom on Load ===== */
+@keyframes fadeZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* ===== Image Styling ===== */
+.home-image {
+  animation: fadeZoomIn 1s ease-out;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Subtle zoom hover effect */
+.home-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(100, 226, 183, 0.4);
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .home-image {
+    max-width: 80% !important;
+    margin-top: 3rem;
+  }
+}
+
+/* Small tablets / large phones */
+@media (max-width: 768px) {
+  .home-image {
+    max-width: 90% !important;
+    margin-top: 2.5rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .home-image {
+    max-width: 95% !important;
+    margin-top: 2rem;
+  }
+}

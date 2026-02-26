@@ -1,0 +1,28 @@
+# ENV
+.env
+*.env
+
+# Node & Python
+node_modules/
+__pycache__/
+*.pyc
+
+# Runtime data
+backend/chat_sessions/
+backend/chat_storage/
+backend/faiss_index/
+
+# 🚨 LARGE TRAINING DATA (CRITICAL)
+frontend/public/Training_docs_videos/
+frontend/public/Data_Science_Training_docs_videos/
+frontend/public/Full_Stack_Training_docs_videos/
+frontend/public/Test_pdfs/
+frontend/public/pdfs/
+
+# Media
+*.mp4
+*.pdf
+*.zip
+
+# IDE
+.vscode/

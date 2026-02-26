@@ -1,0 +1,203 @@
+{
+  "1": {
+    "title": "Unix Command - Basics"
+  },
+  "2": {
+    "title": "Unix Command - Search & Filter"
+  },
+  "3": {
+    "title": "Vi Editor"
+  },
+  "4": {
+    "title": "SQL - DDL"
+  },
+  "5": {
+    "title": "SQL - DML / DRL / DCL / TCL"
+  },
+  "6": {
+    "title": "SQL - Functions & Joins"
+  },
+  "7": {
+    "title": "SQL - PL/SQL Basics"
+  },
+  "8": {
+    "title": "Finacle Intro - CIF"
+  },
+  "9": {
+    "title": "Finacle - Account Opening (CASA)"
+  },
+  "10": {
+    "title": "Finacle - Account Opening (TD/OD/DD)"
+  },
+  "11": {
+    "title": "Finacle - Loan Account Opening"
+  },
+  "12": {
+    "title": "Finacle Intro - Scheme"
+  },
+  "13": {
+    "title": "Finacle - Transactions"
+  },
+  "14": {
+    "title": "Finacle - Inventory & Cheque"
+  },
+  "15": {
+    "title": "Finacle - Charges & Interest"
+  },
+  "16": {
+    "title": "Finacle - SI & TOD"
+  },
+  "17": {
+    "title": "Finacle - Multi Currency"
+  },
+  "18": {
+    "title": "Finacle - InterSOL / CCY"
+  },
+  "19": {
+    "title": "Finacle - Scheme Transfer"
+  },
+  "20": {
+    "title": "Finacle - Teller"
+  },
+  "21": {
+    "title": "Finacle - Clearing"
+  },
+  "22": {
+    "title": "Payments - Trade Finance Intro"
+  },
+  "23": {
+    "title": "Payments - SWIFT / RTGS"
+  },
+  "24": {
+    "title": "Finacle - Batch Job"
+  },
+  "25": {
+    "title": "Scripting - Basics"
+  },
+  "26": {
+    "title": "Scripting - Functions"
+  },
+  "27": {
+    "title": "Scripting - Userhooks"
+  },
+  "28": {
+    "title": "Scripting - SQL"
+  },
+  "29": {
+    "title": "Scripting - EXEC"
+  },
+  "30": {
+    "title": "Scripting - Workflow Intro"
+  },
+  "31": {
+    "title": "Scripting - Workflow"
+  },
+  "32": {
+    "title": "Scripting - Writing Workflow"
+  },
+  "33": {
+    "title": "ONS Core Customization"
+  },
+  "34": {
+    "title": "ONS Core Customization - Populate & Set"
+  },
+  "35": {
+    "title": "ONS Core Customization - DB Store & Retrieve"
+  },
+  "36": {
+    "title": "ONS Custom Menu"
+  },
+  "37": {
+    "title": "ONS Custom Menu - Searcher"
+  },
+  "38": {
+    "title": "ONS Custom Menu - JS & Validation"
+  },
+  "39": {
+    "title": "ONS Custom Menu - Service"
+  },
+  "40": {
+    "title": "ONS Custom Menu - MultiRec"
+  },
+  "41": {
+    "title": "ONS Custom Menu - MultiTab"
+  },
+  "42": {
+    "title": "ONS Custom Menu - MultiPage"
+  },
+  "43": {
+    "title": "ONS Custom Menu - MRM"
+  },
+  "44": {
+    "title": "Script Charges / Batch Jobs"
+  },
+  "45": {
+    "title": "Report - Design"
+  },
+  "46": {
+    "title": "Report - Deployment"
+  },
+  "47": {
+    "title": "Report - Validation"
+  },
+  "48": {
+    "title": "Report - Generation"
+  },
+  "49": {
+    "title": "FI - Product APIs"
+  },
+  "50": {
+    "title": "FI - Custom APIs"
+  },
+  "51": {
+    "title": "FI - Expose Core Custom Field"
+  },
+  "52": {
+    "title": "FI / CRM"
+  },
+  "53": {
+    "title": "Trusted User"
+  },
+  "54": {
+    "title": "COM / SH"
+  },
+  "55": {
+    "title": "Basic Service"
+  },
+  "56": {
+    "title": "CRM Customization - Basics"
+  },
+  "57": {
+    "title": "CRM Customization - Advanced"
+  },
+  "58": {
+    "title": "C24 - Introduction"
+  },
+  "59": {
+    "title": "C24 - Format Changes"
+  },
+  "60": {
+    "title": "Review & Practicing"
+  },
+  "61": {
+    "title": "test"
+  },
+  "62": {
+    "title": "testing"
+  },
+  "63": {
+    "title": "testing"
+  },
+  "64": {
+    "title": "finacle Testing"
+  },
+  "65": {
+    "title": "finbot"
+  },
+  "66": {
+    "title": "finacleis"
+  },
+  "67": {
+    "title": "finished"
+  }
+}
